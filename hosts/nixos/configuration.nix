@@ -14,7 +14,6 @@ in
 
   imports = [
     userConfig.hardwareConfig
-    ./drivers.nix
   ];
 
   # ===== Boot Configuration =====

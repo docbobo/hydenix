@@ -18,7 +18,7 @@ in
 
   # ===== Boot Configuration =====
 
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
 
   # disable if switching to grub
   boot.loader.systemd-boot.enable = true;

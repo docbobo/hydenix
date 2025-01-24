@@ -9,7 +9,7 @@
     ark # kde file archiver
     vim # terminal text editor
     vscode # ide text editor
-    discord # chat client
+    # (currently unsupported on aarch64) discord # chat client
     webcord # discord client
     vesktop # discord client
   ];

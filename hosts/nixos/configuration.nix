@@ -1,25 +1,23 @@
-{
-  pkgs,
-  userConfig,
-  ...
+{ pkgs
+, userConfig
+, ...
 }:
 let
   sddm-candy = pkgs.callPackage ../../hydenix/sources/sddm-candy.nix { };
   sddm-corners = pkgs.callPackage ../../hydenix/sources/sddm-corners.nix { };
   Bibata-Modern-Ice =
-    (import ../../hydenix/sources/themes/utils/arcStore.nix { inherit pkgs; })
-    .cursor."Bibata-Modern-Ice";
+    (import ../../hydenix/sources/themes/utils/arcStore.nix { inherit pkgs; }).cursor."Bibata-Modern-Ice";
 in
 {
 
   imports = [
     userConfig.hardwareConfig
-    ./drivers.nix
+    # ./drivers.nix
   ];
 
   # ===== Boot Configuration =====
 
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
 
   # disable if switching to grub
   boot.loader.systemd-boot.enable = true;
@@ -197,5 +195,5 @@ in
   programs.zsh.enable = true;
 
   # ===== System Version =====
-  system.stateVersion = "24.11"; # Don't change this
+  system.stateVersion = "25.05"; # Don't change this
 }

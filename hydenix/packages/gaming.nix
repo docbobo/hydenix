@@ -3,10 +3,10 @@
 {
   home.packages = with pkgs; [
     # --------------------------------------------------- // Gaming
-    steam # gaming platform
-    gamemode # daemon and library for game optimisations
+    # (currently unsupported on aarch64) steam # gaming platform
+    gamemode # damon and library for game optimisations
     mangohud # system performance overlay
     gamescope # micro-compositor for gaming
-    lutris # gaming platform
+    # (currently unsupported on aarch64) lutris # gaming platform
   ];
 }

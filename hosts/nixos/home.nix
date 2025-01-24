@@ -1,6 +1,5 @@
-{
-  userConfig,
-  ...
+{ userConfig
+, ...
 }:
 
 {
@@ -19,5 +18,5 @@
   };
 
   # Don't change this
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 }

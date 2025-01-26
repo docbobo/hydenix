@@ -14,6 +14,11 @@
       # Version: github:richen604/hydenix/v1.0.0
       url = "github:richen604/hydenix";
     };
+
+    apple-silicon = {
+      url = "github:tpwrules/nixos-apple-silicon";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

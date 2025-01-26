@@ -23,7 +23,7 @@ in
     # Existing config
     graphics = {
       enable = true;
-      enable32Bit = true;
+      # (unsupported on apple-sillicon) enable32Bit = true;
       extraPackages = pkgs.lib.flatten (
         with pkgs;
         [

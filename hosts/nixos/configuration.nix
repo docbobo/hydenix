@@ -12,7 +12,7 @@ in
 
   imports = [
     userConfig.hardwareConfig
-    # ./drivers.nix
+    ./drivers.nix
   ];
 
   # ===== Boot Configuration =====
@@ -21,6 +21,7 @@ in
 
   # disable if switching to grub
   boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = false; # apple-silicon-addition
   #! Enable grub below, note you will have to change to the new bios boot option for settings to apply
   # boot = {
   #   loader = {
@@ -36,6 +37,14 @@ in
   #     };
   #   };
   # };
+
+  # apple-silicon-addition
+  hardware.asahi = {
+    # peripheralFirmwareDirectory = ./firmware;
+    extractPeripheralFirmware = false;
+    useExperimentalGPUDriver = true;
+    withRust = true;
+  };
 
   hardware.bluetooth = {
     enable = true;

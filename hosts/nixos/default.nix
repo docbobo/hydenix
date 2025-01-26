@@ -17,6 +17,7 @@ inputs.hydenix-nixpkgs.lib.nixosSystem {
     {
       nixpkgs.pkgs = commonArgs.pkgs;
     }
+    inputs.apple-silicon.nixosModules.apple-silicon-support
     ./configuration.nix
     inputs.home-manager.nixosModules.home-manager
     {

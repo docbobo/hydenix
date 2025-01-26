@@ -5,6 +5,12 @@
     # Hydenix's nixpkgs
     hydenix-nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Apple Silicon Support    
+    apple-silicon = {
+      url = "github:docbobo/nixos-apple-silicon";
+      inputs.nixpkgs.follows = "hydenix-nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "hydenix-nixpkgs";
